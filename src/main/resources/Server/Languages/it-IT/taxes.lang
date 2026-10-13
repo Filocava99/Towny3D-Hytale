@@ -1,0 +1,6 @@
+# Messaggi tasse
+tax.collected = Riscossi {amount} dalla città {town}
+tax.not_enough_money = La città {town} non ha abbastanza soldi per pagare le tasse
+tax.disabled = Le tasse sono attualmente disabilitate
+tax.town_bankrupt = La città {town} è andata in bancarotta per tasse non pagate
+tax.nation_bankrupt = La nazione {nation} si è sciolta per tasse non pagate

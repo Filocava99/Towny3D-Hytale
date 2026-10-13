@@ -1,0 +1,182 @@
+$C = "../Common.ui";
+
+$C.@PageOverlay {
+
+  $C.@Container {
+    Anchor: (Width: 400, Height: 420);
+
+    #Title {
+      Group {
+        $C.@Title {
+          @Text = "Purchase Layers";
+        }
+      }
+    }
+
+    #Content {
+      LayoutMode: Top;
+      Padding: (Left: 20, Right: 20, Top: 10);
+
+      // Current status section
+      Group #StatusSection {
+        LayoutMode: Top;
+        Anchor: (Bottom: 15);
+
+        Group {
+          LayoutMode: Left;
+          Label {
+            Text: "Current Layers:";
+            Anchor: (Width: 120);
+            Style: (
+              TextColor: #9ca3af
+            );
+          }
+          Label #CurrentLayers {
+            FlexWeight: 1;
+            Style: (
+              TextColor: #ffffff
+            );
+          }
+        }
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Top: 4);
+          Label {
+            Text: "Price Per Layer:";
+            Anchor: (Width: 120);
+            Style: (
+              TextColor: #9ca3af
+            );
+          }
+          Label #LayerPrice {
+            FlexWeight: 1;
+            Style: (
+              TextColor: #f59e0b,
+              RenderBold: true
+            );
+          }
+        }
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Top: 4);
+          Label {
+            Text: "Your Balance:";
+            Anchor: (Width: 120);
+            Style: (
+              TextColor: #9ca3af
+            );
+          }
+          Label #PlayerBalance {
+            FlexWeight: 1;
+            Style: (
+              TextColor: #10b981
+            );
+          }
+        }
+      }
+
+      // Layers to purchase input
+      Label {
+        Text: "LAYERS TO PURCHASE";
+        Style: (
+          RenderUppercase: true,
+          RenderBold: true,
+          FontSize: 12,
+          TextColor: #9ca3af
+        );
+        Anchor: (Bottom: 5);
+      }
+
+      $C.@TextField #LayersField {
+        Anchor: (Height: 38, Bottom: 10);
+        Style: (
+          FontSize: 16
+        );
+      }
+
+      // Quick add buttons
+      Label {
+        Text: "QUICK ADD";
+        Style: (
+          RenderUppercase: true,
+          RenderBold: true,
+          FontSize: 12,
+          TextColor: #9ca3af
+        );
+        Anchor: (Bottom: 5);
+      }
+
+      Group #QuickButtons {
+        LayoutMode: Left;
+        Anchor: (Bottom: 15);
+
+        $C.@SecondaryTextButton #Quick1 {
+          Text: "+1";
+          Anchor: (Right: 5);
+        }
+
+        $C.@SecondaryTextButton #Quick5 {
+          Text: "+5";
+          Anchor: (Right: 5);
+        }
+
+        $C.@SecondaryTextButton #Quick10 {
+          Text: "+10";
+        }
+      }
+
+      // Total cost display
+      Group #TotalSection {
+        LayoutMode: Left;
+        Anchor: (Bottom: 10);
+
+        Label {
+          Text: "Total Cost:";
+          Anchor: (Width: 100);
+          Style: (
+            TextColor: #9ca3af,
+            RenderBold: true
+          );
+        }
+
+        Label #TotalCost {
+          FlexWeight: 1;
+          Style: (
+            TextColor: #ef4444,
+            RenderBold: true,
+            FontSize: 18
+          );
+        }
+      }
+
+      // Error message (hidden by default)
+      Label #ErrorMessage {
+        Visible: false;
+        Style: (
+          TextColor: #ef4444,
+          FontSize: 12
+        );
+        Anchor: (Bottom: 10);
+      }
+
+      // Action buttons
+      Group #ActionButtons {
+        LayoutMode: Right;
+        Anchor: (Bottom: 10);
+
+        $C.@TextButton #PurchaseButton {
+          Text: "Purchase";
+          Anchor: (Right: 10);
+        }
+
+        $C.@CancelTextButton #CancelButton {
+          Text: "Cancel";
+        }
+      }
+    }
+  }
+}
+
+$C.@BackButton {}

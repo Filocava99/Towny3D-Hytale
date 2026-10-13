@@ -1,0 +1,119 @@
+# ===== Town Commands =====
+# Success messages
+town.created = Town '{name}' created successfully!
+town.deleted = Town '{name}' has been deleted
+town.joined = You have joined town '{name}'!
+town.left = You have left town '{name}'
+town.spawn_set = Town spawn set to your current location
+town.spawn_teleported = Teleported to {town} spawn
+town.deposited = Deposited {amount} to town bank
+town.withdrew = Withdrew {amount} from town bank
+town.color_set = Town color updated to {color}
+town.kicked = Kicked '{player}' from the town
+town.invited = Invited '{player}' to join town '{town}'
+town.invite_received = You have been invited to join town '{town}'!
+town.invite_how_to_accept = Type /accept {inviteId} or /accept {town} to accept
+town.invite_check_invites = Type /invite list to see all your invitations
+town.promoted = Promoted '{player}' to assistant
+town.demoted = Demoted '{player}' from assistant
+town.toggle_pvp = PvP {enabled_disabled} for town '{town}'
+town.toggle_explosions = Explosions {enabled_disabled} for town '{town}'
+town.toggle_public = Town is now {public_private}
+town.toggle_open = Town is now {open_closed}. {info_message}
+town.refunded = Town balance of {amount} refunded to you
+
+# Error messages
+town.name_blank = Town name cannot be blank
+town.name_too_long = Town name too long (max {max} characters)
+town.already_in_town = You are already a member of a town
+town.not_found = Town '{name}' not found
+town.not_in_town = You are not a member of any town
+town.name_taken = Town name '{name}' is already taken
+town.join_closed = Town '{name}' is not open. You need an invite.
+town.not_open = You cannot join this town. You need an invite.
+town.not_mayor = Only the mayor can do this
+town.not_leader = Only the mayor or assistants can do this
+town.cant_claim_here = You cannot create a town here - this area is already claimed
+town.spawn_not_set = Town spawn has not been set
+town.must_be_in_territory = You must be in your town's territory to do this
+town.mayor_cant_leave = The mayor cannot leave the town. Delete it or transfer mayorship first
+town.no_money = You need {amount} to create a town (you have {balance})
+town.withdraw_failed = Failed to withdraw money from your account
+town.deposit_failed = Failed to deposit to town bank
+town.not_enough_money = You don't have enough money
+town.town_no_money = Town doesn't have enough money
+town.player_not_found = Player '{name}' not found
+town.player_not_in_town = '{name}' is not a member of your town
+town.already_assistant = '{name}' is already an assistant
+town.not_assistant = '{name}' is not an assistant
+town.cant_kick_mayor = You cannot kick the mayor
+town.invalid_color = Invalid color format. Use 6-digit hex color (e.g., FF0000)
+town.invalid_value = Invalid value. Use: {valid_values}
+
+# Info messages
+town.use_town_commands = Use /town for town commands
+town.new_balance = New town balance: {amount}
+town.closed_invite_only = This town is closed (invite only)
+
+# ===== Nation Commands =====
+nation.created = Nation '{name}' created successfully!
+nation.deleted = Nation '{name}' has been deleted
+nation.joined = Your town has joined nation '{name}'!
+nation.left = Your town has left the nation '{name}'
+nation.capital_set = '{town}' is now the capital of the nation
+nation.already_in_nation = Your town is already in a nation
+nation.not_in_nation = Your town is not in a nation
+nation.not_found = Nation '{name}' not found
+nation.name_taken = Nation name '{name}' is already taken
+nation.capital_cant_leave = The capital cannot leave the nation. Transfer capital or disband first
+
+# ===== Resident Commands =====
+resident.not_found = Resident not found
+residents.online = Online Residents ({count}/{total})
+
+# ===== Plot Commands =====
+plot.claimed = Plot claimed
+plot.unclaimed = Plot unclaimed
+plot.not_owner = You don't own this plot
+plot.for_sale = Plot put up for sale
+plot.not_for_sale = This plot is not for sale
+plot.purchased = You purchased this plot for {amount}
+plot.toggle_set = Plot {flag} set to {value}
+
+# ===== Claim Commands =====
+claim.stick_received = Claim stick received. Left-click to set first corner, press F to set second corner
+claim.stick_first_point = First point set at {coords}
+claim.stick_second_point = Second point set at {coords}
+claim.stick_cleared = Selection cleared
+claim.region_claimed = Region claimed successfully
+claim.region_unclaimed = Region unclaimed
+claim.no_selection = No selection made. Use claim stick first
+claim.selection_too_large = Selection too large. Maximum size is {max} blocks
+claim.cannot_claim_wilderness = Cannot claim home region outside town territory
+
+# ===== General Errors =====
+error.player_only = Only players can use this command
+error.player_not_found = Player not found
+error.resident_not_found = Resident not found
+error.failed_player_ref = Failed to get player reference
+error.failed_player_info = Failed to get player info
+error.failed_player_position = Failed to get player position
+error.failed_player_transform = Failed to get player transform
+error.usage = Usage: {usage}
+error.invalid_amount = Amount must be a positive number
+error.invalid_color = Invalid color format. Use 6-digit hex color (e.g., FF0000)
+error.permission = You don't have permission to do this
+
+# ===== Wilderness =====
+wilderness.info = You are in the wilderness (unclaimed land)
+
+# ===== Admin Commands =====
+admin.config_reloaded = Configuration reloaded
+admin.data_saved = All data saved successfully
+admin.spy_enabled = Chat spy mode enabled
+admin.spy_disabled = Chat spy mode disabled
+admin.spy_info = You will now see all town and nation chat messages
+admin.unclaimed = Unclaimed {count} region(s)
+admin.reset_player = Reset '{player}'s town data
+admin.deleted_town = Deleted town '{town}'
+admin.removed_from_town = Removed '{player}' from town '{town}'

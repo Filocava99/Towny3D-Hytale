@@ -1,0 +1,1021 @@
+$C = "../Common.ui";
+
+$C.@PageOverlay {
+
+  $C.@Container {
+    Anchor: (Width: 550, Height: 700);
+
+    #Title {
+      Group {
+        $C.@Title {
+          @Text = "Town Information";
+        }
+      }
+    }
+
+    #Content {
+      LayoutMode: Top;
+      Padding: (Left: 20, Right: 20, Top: 10);
+
+      // Town Name Row
+      Group #TownNameRow {
+        LayoutMode: Left;
+        Anchor: (Bottom: 10);
+
+        Label #TownName {
+          FlexWeight: 1;
+          Style: (
+            FontSize: 24,
+            RenderBold: true,
+            TextColor: #3b82f6
+          );
+        }
+      }
+
+      // Tab Bar
+      Group #TabBar {
+        LayoutMode: Left;
+        Anchor: (Bottom: 10);
+
+        $C.@SmallSecondaryTextButton #InfoTab {
+          Text: "Info";
+          Anchor: (Right: 5);
+        }
+
+        $C.@SmallSecondaryTextButton #SettingsTab {
+          Text: "Settings";
+          Anchor: (Right: 5);
+        }
+
+        $C.@SmallSecondaryTextButton #ResidentsTab {
+          Text: "Residents";
+        }
+      }
+
+      // Tab Content Container
+      Group #TabContent {
+        LayoutMode: Top;
+        Anchor: (Bottom: 10);
+
+        // ==================== INFO TAB ====================
+        Group #InfoContent {
+          LayoutMode: Top;
+          Visible: true;
+
+          // Info Section
+          Group #InfoSection {
+            LayoutMode: Top;
+            Anchor: (Bottom: 15);
+
+            // Mayor
+            Group {
+              LayoutMode: Left;
+              Anchor: (Bottom: 6);
+
+              Label {
+                Text: "Mayor:";
+                Style: (
+                  FontSize: 14,
+                  TextColor: #9ca3af,
+                  RenderUppercase: true
+                );
+                Anchor: (Width: 80);
+              }
+
+              Label #MayorName {
+                FlexWeight: 1;
+                Style: (
+                  FontSize: 16,
+                  TextColor: #ffffff
+                );
+              }
+            }
+
+            // Residents
+            Group {
+              LayoutMode: Left;
+              Anchor: (Bottom: 6);
+
+              Label {
+                Text: "Residents:";
+                Style: (
+                  FontSize: 14,
+                  TextColor: #9ca3af,
+                  RenderUppercase: true
+                );
+                Anchor: (Width: 80);
+              }
+
+              Label #ResidentCount {
+                FlexWeight: 1;
+                Style: (
+                  FontSize: 16,
+                  TextColor: #ffffff,
+                  RenderBold: true
+                );
+              }
+            }
+
+            // Balance
+            Group {
+              LayoutMode: Left;
+              Anchor: (Bottom: 6);
+
+              Label {
+                Text: "Balance:";
+                Style: (
+                  FontSize: 14,
+                  TextColor: #9ca3af,
+                  RenderUppercase: true
+                );
+                Anchor: (Width: 80);
+              }
+
+              Label #Balance {
+                FlexWeight: 1;
+                Style: (
+                  FontSize: 16,
+                  TextColor: #10b981,
+                  RenderBold: true
+                );
+                Anchor: (Right: 10);
+              }
+
+              $C.@SmallSecondaryTextButton #DepositButton {
+                Text: "Deposit";
+                Anchor: (Width: 95);
+              }
+            }
+
+            // Layers
+            Group {
+              LayoutMode: Left;
+              Anchor: (Bottom: 6);
+
+              Label {
+                Text: "Layers:";
+                Style: (
+                  FontSize: 14,
+                  TextColor: #9ca3af,
+                  RenderUppercase: true
+                );
+                Anchor: (Width: 80);
+              }
+
+              Label #Layers {
+                FlexWeight: 1;
+                Style: (
+                  FontSize: 16,
+                  TextColor: #ffffff
+                );
+                Anchor: (Right: 10);
+              }
+
+              $C.@SmallSecondaryTextButton #ExpandButton {
+                Text: "Expand";
+                Anchor: (Width: 95);
+              }
+            }
+
+            // Nation Row (conditionally visible)
+            Group #NationRow {
+              LayoutMode: Left;
+              Anchor: (Bottom: 6);
+
+              Label {
+                Text: "Nation:";
+                Style: (
+                  FontSize: 14,
+                  TextColor: #9ca3af,
+                  RenderUppercase: true
+                );
+                Anchor: (Width: 80);
+              }
+
+              Label #NationName {
+                FlexWeight: 1;
+                Style: (
+                  FontSize: 16,
+                  TextColor: #f59e0b
+                );
+              }
+            }
+
+            // Status Badges
+            Group {
+              LayoutMode: Left;
+              Anchor: (Bottom: 10);
+
+              Label #OpenStatus {
+                Anchor: (Height: 22, Right: 5);
+                Style: (
+                  FontSize: 12,
+                  RenderBold: true,
+                  RenderUppercase: true,
+                  TextColor: #ffffff,
+                  HorizontalAlignment: Center,
+                  VerticalAlignment: Center
+                );
+                Background: (Color: #10b981(0.3));
+                OutlineColor: #10b981;
+                OutlineSize: 1;
+                Padding: (Horizontal: 10, Vertical: 4);
+              }
+
+              Label #PublicStatus {
+                Anchor: (Height: 22);
+                Style: (
+                  FontSize: 12,
+                  RenderBold: true,
+                  RenderUppercase: true,
+                  TextColor: #ffffff,
+                  HorizontalAlignment: Center,
+                  VerticalAlignment: Center
+                );
+                Background: (Color: #3b82f6(0.3));
+                OutlineColor: #3b82f6;
+                OutlineSize: 1;
+                Padding: (Horizontal: 10, Vertical: 4);
+              }
+            }
+          }
+
+          // Board Section
+          Group #BoardSection {
+            LayoutMode: Top;
+            Anchor: (Bottom: 15);
+            Visible: false;
+
+            Label {
+              Text: "Board";
+              Style: (
+                FontSize: 14,
+                TextColor: #9ca3af,
+                RenderUppercase: true,
+                RenderBold: true
+              );
+              Anchor: (Bottom: 6);
+            }
+
+            Group {
+              Background: (Color: #1e293b(0.8));
+              OutlineColor: #334155;
+              OutlineSize: 1;
+              Padding: (Full: 10);
+              Anchor: (Width: 460);
+
+              Label #BoardText {
+                Style: (
+                  FontSize: 14,
+                  TextColor: #e2e8f0,
+                  Wrap: true
+                );
+              }
+            }
+          }
+
+          // Quick Actions Row 1
+          Group #QuickActions1 {
+            LayoutMode: Left;
+            Anchor: (Bottom: 10);
+
+            $C.@TextButton #SpawnButton {
+              Text: "Spawn";
+              FlexWeight: 1;
+              Anchor: (Right: 5);
+            }
+
+            $C.@TextButton #SetSpawnButton {
+              Text: "Set Spawn";
+              FlexWeight: 1;
+            }
+          }
+
+          // Quick Actions Row 2
+          Group #QuickActions2 {
+            LayoutMode: Left;
+            Anchor: (Bottom: 10);
+
+            $C.@TextButton #SettingsButton {
+              Text: "Settings";
+              FlexWeight: 1;
+              Anchor: (Right: 5);
+            }
+
+            $C.@TextButton #ResidentsButton {
+              Text: "Residents";
+              FlexWeight: 1;
+              Anchor: (Right: 5);
+            }
+
+            $C.@TextButton #PlotsButton {
+              Text: "Plots";
+              FlexWeight: 1;
+            }
+          }
+        }
+
+        // ==================== SETTINGS TAB ====================
+        Group #SettingsContent {
+          LayoutMode: Top;
+          Visible: false;
+
+          // Permission Notice
+          Group #PermissionNotice {
+            LayoutMode: Top;
+            Anchor: (Bottom: 15);
+            Visible: false;
+
+            Label {
+              Text: "You need mayor or assistant permissions to change settings.";
+              Style: (
+                FontSize: 14,
+                TextColor: #ef4444,
+                Wrap: true
+              );
+            }
+          }
+
+          // Toggles Section
+          Group #TogglesSection {
+            LayoutMode: Top;
+            Anchor: (Bottom: 15);
+
+            Label {
+              Text: "TOWN SETTINGS";
+              Style: (
+                FontSize: 12,
+                TextColor: #9ca3af,
+                RenderUppercase: true,
+                RenderBold: true
+              );
+              Anchor: (Bottom: 8);
+            }
+
+            Group {
+              LayoutMode: Left;
+              Anchor: (Bottom: 8);
+
+              $C.@Toggle #OpenToggle {
+                Anchor: (Width: 60, Height: 26, Right: 10);
+              }
+
+              Label {
+                Text: "Open (anyone can join)";
+                Style: (FontSize: 14, TextColor: #e2e8f0);
+              }
+            }
+
+            Group {
+              LayoutMode: Left;
+              Anchor: (Bottom: 8);
+
+              $C.@Toggle #PublicToggle {
+                Anchor: (Width: 60, Height: 26, Right: 10);
+              }
+
+              Label {
+                Text: "Public (visible to everyone)";
+                Style: (FontSize: 14, TextColor: #e2e8f0);
+              }
+            }
+          }
+
+          // Board Section
+          Group #BoardSettingsSection {
+            LayoutMode: Top;
+            Anchor: (Bottom: 15);
+
+            Label {
+              Text: "TOWN BOARD";
+              Style: (
+                FontSize: 12,
+                TextColor: #9ca3af,
+                RenderUppercase: true,
+                RenderBold: true
+              );
+              Anchor: (Bottom: 8);
+            }
+
+            $C.@TextField #BoardField {
+              Anchor: (Height: 60);
+              Style: (
+                FontSize: 14
+              );
+            }
+          }
+
+          // Tax Section
+          Group #TaxSettingsSection {
+            LayoutMode: Top;
+            Anchor: (Bottom: 15);
+
+            Label {
+              Text: "TAX SETTINGS";
+              Style: (
+                FontSize: 12,
+                TextColor: #9ca3af,
+                RenderUppercase: true,
+                RenderBold: true
+              );
+              Anchor: (Bottom: 8);
+            }
+
+            Group {
+              LayoutMode: Left;
+              Anchor: (Bottom: 8);
+
+              Label {
+                Text: "Tax Amount:";
+                Style: (
+                  FontSize: 14,
+                  TextColor: #9ca3af
+                );
+                Anchor: (Width: 100);
+              }
+
+              $C.@TextField #TaxAmountField {
+                FlexWeight: 1;
+                Anchor: (Height: 38);
+              }
+            }
+
+            Group {
+              LayoutMode: Left;
+
+              Label {
+                Text: "Tax Type:";
+                Style: (
+                  FontSize: 14,
+                  TextColor: #9ca3af
+                );
+                Anchor: (Width: 100);
+              }
+
+              $C.@DropdownBox #TaxTypeDropdown {
+                FlexWeight: 1;
+              }
+            }
+          }
+
+          // Settings Action Buttons
+          Group #SettingsActions {
+            LayoutMode: Right;
+            Anchor: (Top: 10);
+
+            $C.@TextButton #SaveSettingsButton {
+              Text: "Save";
+              Anchor: (Right: 10);
+            }
+
+            $C.@CancelTextButton #CancelSettingsButton {
+              Text: "Cancel";
+            }
+          }
+        }
+
+        // ==================== RESIDENTS TAB ====================
+        Group #ResidentsContent {
+          LayoutMode: Top;
+          Visible: false;
+
+          // Residents List Header
+          Group #ResidentsHeader {
+            LayoutMode: Left;
+            Anchor: (Bottom: 8);
+
+            Label {
+              Text: "RESIDENTS";
+              Style: (
+                FontSize: 12,
+                TextColor: #9ca3af,
+                RenderUppercase: true,
+                RenderBold: true
+              );
+              FlexWeight: 1;
+            }
+
+            Label #ResidentPageInfo {
+              Style: (
+                FontSize: 12,
+                TextColor: #6b7280
+              );
+            }
+          }
+
+          // Residents List Container (scrollable)
+          Group #ResidentsList {
+            LayoutMode: Top;
+            Anchor: (Height: 350);
+            ScrollbarStyle: $C.@DefaultScrollbarStyle;
+
+            Group #ResidentEntry0 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry1 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry2 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry3 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry4 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry5 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry6 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry7 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry8 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry9 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry10 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry11 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry12 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry13 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry14 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry15 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry16 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry17 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry18 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+
+            Group #ResidentEntry19 {
+              LayoutMode: Left;
+              Anchor: (Width: 460, Height: 30, Bottom: 2);
+              Background: #1e293b;
+              OutlineColor: #334155;
+              OutlineSize: 1;
+
+              Label #ResidentName {
+                FlexWeight: 1;
+                Style: (FontSize: 14, TextColor: #ffffff);
+                Anchor: (Left: 10);
+              }
+
+              Label #RoleBadge {
+                Anchor: (Width: 80, Right: 10);
+                Style: (FontSize: 10, RenderBold: true, TextColor: #ffffff, HorizontalAlignment: Center);
+                Background: (Color: #6b7280(0.3));
+                OutlineColor: #6b7280;
+                OutlineSize: 1;
+                Padding: (Horizontal: 8, Vertical: 4);
+              }
+            }
+          }
+
+          // Pagination Controls
+          Group #PaginationControls {
+            LayoutMode: Left;
+            Anchor: (Top: 10);
+
+            $C.@SmallSecondaryTextButton #PrevPageButton {
+              Text: "Previous";
+              Anchor: (Right: 10);
+            }
+
+            $C.@SmallSecondaryTextButton #NextPageButton {
+              Text: "Next";
+            }
+          }
+
+          // Action Buttons for Selected Resident
+          Group #ResidentActions {
+            LayoutMode: Left;
+            Anchor: (Top: 10);
+            Visible: false;
+
+            $C.@SecondaryTextButton #PromoteButton {
+              Text: "Promote";
+              Anchor: (Right: 10);
+            }
+
+            $C.@SecondaryTextButton #DemoteButton {
+              Text: "Demote";
+              Anchor: (Right: 10);
+              Visible: false;
+            }
+
+            $C.@CancelTextButton #KickButton {
+              Text: "Kick";
+              Anchor: (Right: 10);
+            }
+
+            $C.@TextButton #TransferMayorButton {
+              Text: "Make Mayor";
+              Visible: false;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+$C.@BackButton {}

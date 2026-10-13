@@ -1,0 +1,6 @@
+# Tax messages
+tax.collected = Collected {amount} from town {town}
+tax.not_enough_money = Town {town} doesn't have enough to pay taxes
+tax.disabled = Taxes are currently disabled
+tax.town_bankrupt = Town {town} has gone bankrupt due to unpaid taxes
+tax.nation_bankrupt = Nation {nation} has dissolved due to unpaid taxes

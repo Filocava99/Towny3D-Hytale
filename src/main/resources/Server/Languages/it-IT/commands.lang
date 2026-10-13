@@ -1,0 +1,119 @@
+# ===== Comandi Town =====
+# Messaggi di successo
+town.created = Città '{name}' creata con successo!
+town.deleted = La città '{name}' è stata eliminata
+town.joined = Ti sei unito alla città '{name}'!
+town.left = Hai lasciato la città '{name}'
+town.spawn_set = Spawn della città impostato alla tua posizione attuale
+town.spawn_teleported = Teletrasportato allo spawn di {town}
+town.deposited = Depositati {amount} nella banca della città
+town.withdrew = Prelevati {amount} dalla banca della città
+town.color_set = Colore della città aggiornato a {color}
+town.kicked = '{player}' è stato espulso dalla città
+town.invited = '{player}' è stato invitato a unirsi alla città '{town}'
+town.invite_received = Sei stato invitato a unirti alla città '{town}'!
+town.invite_how_to_accept = Digita /accept {inviteId} o /accept {town} per accettare
+town.invite_check_invites = Digita /invite list per vedere tutti i tuoi inviti
+town.promoted = '{player}' è stato promosso ad assistente
+town.demoted = '{player}' è stato retrocesso da assistente
+town.toggle_pvp = PvP {enabled_disabled} per la città '{town}'
+town.toggle_explosions = Esplosioni {enabled_disabled} per la città '{town}'
+town.toggle_public = La città è ora {public_private}
+town.toggle_open = La città è ora {open_closed}. {info_message}
+town.refunded = Bilancio della città di {amount} rimborsato
+
+# Messaggi di errore
+town.name_blank = Il nome della città non può essere vuoto
+town.name_too_long = Nome della città troppo lungo (massimo {max} caratteri)
+town.already_in_town = Sei già membro di una città
+town.not_found = Città '{name}' non trovata
+town.not_in_town = Non sei membro di nessuna città
+town.name_taken = Il nome della città '{name}' è già in uso
+town.join_closed = La città '{name}' non è aperta. Ti serve un invito.
+town.not_open = Non puoi unirti a questa città. Ti serve un invito.
+town.not_mayor = Solo il sindaco può fare questo
+town.not_leader = Solo il sindaco o gli assistenti possono fare questo
+town.cant_claim_here = Non puoi creare una città qui - questa area è già stata reclamata
+town.spawn_not_set = Lo spawn della città non è stato impostato
+town.must_be_in_territory = Devi essere nel territorio della tua città per fare questo
+town.mayor_cant_leave = Il sindaco non può lasciare la città. Eliminala o trasferisci la carica prima
+town.no_money = Ti servono {amount} per creare una città (hai {balance})
+town.withdraw_failed = Impossibile prelevare soldi dal tuo account
+town.deposit_failed = Impossibile depositare nella banca della città
+town.not_enough_money = Non hai abbastanza soldi
+town.town_no_money = La città non ha abbastanza soldi
+town.player_not_found = Giocatore '{name}' non trovato
+town.player_not_in_town = '{name}' non è membro della tua città
+town.already_assistant = '{name}' è già un assistente
+town.not_assistant = '{name}' non è un assistente
+town.cant_kick_mayor = Non puoi espellere il sindaco
+town.invalid_color = Formato colore non valido. Usa colore hex a 6 cifre (es. FF0000)
+town.invalid_value = Valore non valido. Usa: {valid_values}
+
+# Messaggi informativi
+town.use_town_commands = Usa /town per i comandi della città
+town.new_balance = Nuovo bilancio città: {amount}
+town.closed_invite_only = Questa città è chiusa (solo su invito)
+
+# ===== Comandi Nation =====
+nation.created = Nazione '{name}' creata con successo!
+nation.deleted = La nazione '{name}' è stata eliminata
+nation.joined = La tua città si è unita alla nazione '{name}'!
+nation.left = La tua città ha lasciato la nazione '{name}'
+nation.capital_set = '{town}' è ora la capitale della nazione
+nation.already_in_nation = La tua città è già in una nazione
+nation.not_in_nation = La tua città non è in una nazione
+nation.not_found = Nazione '{name}' non trovata
+nation.name_taken = Il nome della nazione '{name}' è già in uso
+nation.capital_cant_leave = La capitale non può lasciare la nazione. Trasferisci la capitale o sciogli la nazione prima
+
+# ===== Comandi Resident =====
+resident.not_found = Residente non trovato
+residents.online = Residenti online ({count}/{total})
+
+# ===== Comandi Plot =====
+plot.claimed = Terreno reclamato
+plot.unclaimed = Terreno reclamazione revocata
+plot.not_owner = Non possiedi questo terreno
+plot.for_sale = Terreno messo in vendita
+plot.not_for_sale = Questo terreno non è in vendita
+plot.purchased = Hai acquistato questo terreno per {amount}
+plot.toggle_set = Terreno {flag} impostato a {value}
+
+# ===== Comandi Claim =====
+claim.stick_received = Bacchetta di claim ricevuta. Clic sinistro per impostare il primo angolo, premi F per il secondo
+claim.stick_first_point = Primo punto impostato a {coords}
+claim.stick_second_point = Secondo punto impostato a {coords}
+claim.stick_cleared = Selezione cancellata
+claim.region_claimed = Regione reclamata con successo
+claim.region_unclaimed = Reclamazione regione revocata
+claim.no_selection = Nessuna selezione fatta. Usa la bacchetta di claim prima
+claim.selection_too_large = Selezione troppo grande. La dimensione massima è {max} blocchi
+claim.cannot_claim_wilderness = Impossibile reclamare regione home fuori dal territorio della città
+
+# ===== Errori Generali =====
+error.player_only = Solo i giocatori possono usare questo comando
+error.player_not_found = Giocatore non trovato
+error.resident_not_found = Residente non trovato
+error.failed_player_ref = Impossibile ottenere il riferimento del giocatore
+error.failed_player_info = Impossibile ottenere le info del giocatore
+error.failed_player_position = Impossibile ottenere la posizione del giocatore
+error.failed_player_transform = Impossibile ottenere il transform del giocatore
+error.usage = Uso: {usage}
+error.invalid_amount = L'importo deve essere un numero positivo
+error.invalid_color = Formato colore non valido. Usa colore hex a 6 cifre (es. FF0000)
+error.permission = Non hai il permesso di fare questo
+
+# ===== Wildernness =====
+wilderness.info = Sei nella wilderness (terreno non reclamato)
+
+# ===== Comandi Admin =====
+admin.config_reloaded = Configurazione ricaricata
+admin.data_saved = Tutti i dati salvati con successo
+admin.spy_enabled = Modalità spia chat abilitata
+admin.spy_disabled = Modalità spia chat disabilitata
+admin.spy_info = Vedrai ora tutti i messaggi chat di città e nazione
+admin.unclaimed = Reclamazione revocata per {count} regioni
+admin.reset_player = Dati città di '{player}' resettati
+admin.deleted_town = Città '{town}' eliminata
+admin.removed_from_town = '{player}' rimosso dalla città '{town}'

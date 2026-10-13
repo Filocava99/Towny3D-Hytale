@@ -1,0 +1,145 @@
+$C = "../Common.ui";
+
+$C.@PageOverlay {
+
+  $C.@Container {
+    Anchor: (Width: 400, Height: 350);
+
+    #Title {
+      Group {
+        $C.@Title {
+          @Text = "Town Bank Deposit";
+        }
+      }
+    }
+
+    #Content {
+      LayoutMode: Top;
+      Padding: (Left: 20, Right: 20, Top: 10);
+
+      // Balance displays
+      Group #BalancesSection {
+        LayoutMode: Top;
+        Anchor: (Bottom: 15);
+
+        Group {
+          LayoutMode: Left;
+          Label {
+            Text: "Town Balance:";
+            Anchor: (Width: 120);
+            Style: (
+              TextColor: #9ca3af
+            );
+          }
+          Label #TownBalance {
+            FlexWeight: 1;
+            Style: (
+              TextColor: #10b981,
+              RenderBold: true
+            );
+          }
+        }
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Top: 4);
+          Label {
+            Text: "Your Balance:";
+            Anchor: (Width: 120);
+            Style: (
+              TextColor: #9ca3af
+            );
+          }
+          Label #PlayerBalance {
+            FlexWeight: 1;
+            Style: (
+              TextColor: #ffffff
+            );
+          }
+        }
+      }
+
+      // Amount input
+      Label {
+        Text: "DEPOSIT AMOUNT";
+        Style: (
+          RenderUppercase: true,
+          RenderBold: true,
+          FontSize: 12,
+          TextColor: #9ca3af
+        );
+        Anchor: (Bottom: 5);
+      }
+
+      $C.@TextField #AmountField {
+        Anchor: (Height: 38, Bottom: 15);
+        Style: (
+          FontSize: 16
+        );
+      }
+
+      // Quick amount buttons
+      Label {
+        Text: "QUICK DEPOSIT";
+        Style: (
+          RenderUppercase: true,
+          RenderBold: true,
+          FontSize: 12,
+          TextColor: #9ca3af
+        );
+        Anchor: (Bottom: 5);
+      }
+
+      Group #QuickButtons {
+        LayoutMode: Left;
+        Anchor: (Bottom: 20);
+
+        $C.@SecondaryTextButton #Quick100 {
+          Text: "$100";
+          Anchor: (Right: 5);
+        }
+
+        $C.@SecondaryTextButton #Quick500 {
+          Text: "$500";
+          Anchor: (Right: 5);
+        }
+
+        $C.@SecondaryTextButton #Quick1000 {
+          Text: "$1000";
+          Anchor: (Right: 5);
+        }
+
+        $C.@SecondaryTextButton #QuickAll {
+          Text: "All";
+        }
+      }
+
+      // Error message (hidden by default)
+      Label #ErrorMessage {
+        Visible: false;
+        Style: (
+          TextColor: #ef4444,
+          FontSize: 12
+        );
+        Anchor: (Bottom: 10);
+      }
+
+      // Action buttons
+      Group #ActionButtons {
+        LayoutMode: Right;
+        Anchor: (Bottom: 10);
+
+        $C.@TextButton #DepositButton {
+          Text: "Deposit";
+          Anchor: (Right: 10);
+        }
+
+        $C.@CancelTextButton #CancelButton {
+          Text: "Cancel";
+        }
+      }
+    }
+  }
+}
+
+$C.@BackButton {}

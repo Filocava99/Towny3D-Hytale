@@ -1,0 +1,7 @@
+# Economy messages
+economy.deposit = Deposited {amount}
+economy.withdraw = Withdrew {amount}
+economy.balance = Balance: {amount}
+economy.not_enough = You don't have enough money
+economy.transfer = Transferred {amount} to {recipient}
+economy.received = Received {amount} from {sender}

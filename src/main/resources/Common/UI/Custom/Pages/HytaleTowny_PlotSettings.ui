@@ -1,0 +1,269 @@
+$C = "../Common.ui";
+
+$C.@PageOverlay {
+
+  $C.@Container {
+    Anchor: (Width: 500, Height: 550);
+
+    #Title {
+      Group {
+        $C.@Title {
+          @Text = "Plot Settings";
+        }
+      }
+    }
+
+    #Content {
+      LayoutMode: Top;
+      Padding: (Left: 20, Right: 20, Top: 10);
+      ScrollbarStyle: $C.@DefaultScrollbarStyle;
+
+      // Location Section
+      Group #LocationSection {
+        LayoutMode: Top;
+        Anchor: (Bottom: 15);
+
+        Label {
+          Text: "LOCATION";
+          Style: (
+            RenderUppercase: true,
+            RenderBold: true,
+            FontSize: 12,
+            TextColor: #9ca3af
+          );
+          Anchor: (Bottom: 5);
+        }
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Bottom: 4);
+          Label {
+            Text: "Chunk:";
+            Anchor: (Width: 80);
+            Style: (TextColor: #9ca3af);
+          }
+          Label #ChunkCoords {
+            FlexWeight: 1;
+            Style: (TextColor: #ffffff);
+          }
+        }
+
+        Group {
+          LayoutMode: Left;
+          Label {
+            Text: "Y Range:";
+            Anchor: (Width: 80);
+            Style: (TextColor: #9ca3af);
+          }
+          Label #YRange {
+            FlexWeight: 1;
+            Style: (TextColor: #ffffff);
+          }
+        }
+      }
+
+      // Plot Name Section
+      Group #NameSection {
+        LayoutMode: Top;
+        Anchor: (Bottom: 15);
+
+        Label {
+          Text: "PLOT NAME";
+          Style: (
+            RenderUppercase: true,
+            RenderBold: true,
+            FontSize: 12,
+            TextColor: #9ca3af
+          );
+          Anchor: (Bottom: 5);
+        }
+
+        $C.@TextField #PlotNameField {
+          Anchor: (Height: 38);
+          Style: (FontSize: 14);
+        }
+      }
+
+      // Owner Section
+      Group #OwnerSection {
+        LayoutMode: Top;
+        Anchor: (Bottom: 15);
+
+        Label {
+          Text: "OWNER";
+          Style: (
+            RenderUppercase: true,
+            RenderBold: true,
+            FontSize: 12,
+            TextColor: #9ca3af
+          );
+          Anchor: (Bottom: 5);
+        }
+
+        Group {
+          LayoutMode: Left;
+
+          Label #OwnerName {
+            FlexWeight: 1;
+            Style: (TextColor: #ffffff);
+          }
+
+          $C.@SmallSecondaryTextButton #EvictButton {
+            Text: "Evict";
+            Visible: false;
+          }
+        }
+      }
+
+      // Toggle Flags Section
+      Group #FlagsSection {
+        LayoutMode: Top;
+        Anchor: (Bottom: 15);
+
+        Label {
+          Text: "TOGGLE FLAGS";
+          Style: (
+            RenderUppercase: true,
+            RenderBold: true,
+            FontSize: 12,
+            TextColor: #9ca3af
+          );
+          Anchor: (Bottom: 8);
+        }
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Bottom: 6);
+
+          Label {
+            Text: "PvP";
+            Anchor: (Width: 100);
+            Style: (TextColor: #ffffff);
+          }
+
+          $C.@Toggle #PvpToggle {
+            Anchor: (Width: 60);
+          }
+        }
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Bottom: 6);
+
+          Label {
+            Text: "Fire Spread";
+            Anchor: (Width: 100);
+            Style: (TextColor: #ffffff);
+          }
+
+          $C.@Toggle #FireToggle {
+            Anchor: (Width: 60);
+          }
+        }
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Bottom: 6);
+
+          Label {
+            Text: "Explosions";
+            Anchor: (Width: 100);
+            Style: (TextColor: #ffffff);
+          }
+
+          $C.@Toggle #ExplosionToggle {
+            Anchor: (Width: 60);
+          }
+        }
+
+        Group {
+          LayoutMode: Left;
+
+          Label {
+            Text: "Hostile Mobs";
+            Anchor: (Width: 100);
+            Style: (TextColor: #ffffff);
+          }
+
+          $C.@Toggle #MobsToggle {
+            Anchor: (Width: 60);
+          }
+        }
+      }
+
+      // For Sale Section
+      Group #SaleSection {
+        LayoutMode: Top;
+        Anchor: (Bottom: 15);
+
+        Label {
+          Text: "FOR SALE";
+          Style: (
+            RenderUppercase: true,
+            RenderBold: true,
+            FontSize: 12,
+            TextColor: #9ca3af
+          );
+          Anchor: (Bottom: 5);
+        }
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Bottom: 8);
+
+          $C.@Toggle #ForSaleToggle {
+            Anchor: (Width: 60, Right: 10);
+          }
+
+          Label {
+            Text: "List this plot for sale";
+            FlexWeight: 1;
+            Style: (TextColor: #ffffff);
+          }
+        }
+
+        Group #PriceRow {
+          LayoutMode: Left;
+
+          Label {
+            Text: "Price:";
+            Anchor: (Width: 60, Right: 10);
+            Style: (TextColor: #9ca3af);
+          }
+
+          $C.@TextField #PriceField {
+            Anchor: (Height: 32, Width: 150);
+            Style: (FontSize: 14);
+          }
+        }
+      }
+
+      // Error message (hidden by default)
+      Label #ErrorMessage {
+        Visible: false;
+        Style: (
+          TextColor: #ef4444,
+          FontSize: 12
+        );
+        Anchor: (Bottom: 10);
+      }
+
+      // Action buttons
+      Group #ActionButtons {
+        LayoutMode: Right;
+        Anchor: (Bottom: 10);
+
+        $C.@TextButton #SaveButton {
+          Text: "Save";
+          Anchor: (Right: 10);
+        }
+
+        $C.@CancelTextButton #CancelButton {
+          Text: "Cancel";
+        }
+      }
+    }
+  }
+}
+
+$C.@BackButton {}

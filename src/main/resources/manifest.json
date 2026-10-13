@@ -1,0 +1,22 @@
+{
+  "Group": "it.cava99.towny3d",
+  "Name": "Towny3D",
+  "Version": "1.0.0",
+  "Description": "A high-performance 3D land protection plugin for Hytale servers. Features town/nation management, plot claims, PvP control, and advanced permission systems with Kotlin coroutines and spatial indexing.",
+  "Authors": [
+    {
+      "Name": "Towny3D Contributors",
+      "Url": "https://github.com/cava99"
+    }
+  ],
+  "Website": "https://github.com/cava99/Towny3D",
+  "Main": "it.cava99.towny3d.Towny3D",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {
+    "com.cassaforte:Cassaforte": "*",
+    "net.cfh.vault:VaultUnlocked": "*"
+  },
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true
+}

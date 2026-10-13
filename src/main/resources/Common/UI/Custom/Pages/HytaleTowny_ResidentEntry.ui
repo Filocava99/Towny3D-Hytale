@@ -1,0 +1,78 @@
+$C = "../Common.ui";
+
+// Resident entry template for use in TownInfoGui residents list
+// Each entry displays resident info and role badges
+
+Group #ResidentEntry {
+  LayoutMode: Left;
+  Anchor: (Height: 40, Bottom: 4);
+  Background: (Color: #1e293b(0.5));
+  OutlineColor: #334155;
+  OutlineSize: 1;
+  Padding: (Horizontal: 10, Vertical: 6);
+
+  // Resident Name
+  Label #ResidentName {
+    FlexWeight: 1;
+    Style: (
+      FontSize: 15,
+      TextColor: #ffffff,
+      VerticalAlignment: Center
+    );
+  }
+
+  // Role Badges Container
+  Group #RoleBadges {
+    LayoutMode: Left;
+    Anchor: (Right: 10);
+
+    // Mayor Badge
+    Label #MayorBadge {
+      Anchor: (Height: 22, Right: 5);
+      Text: "MAYOR";
+      Style: (
+        FontSize: 10,
+        RenderBold: true,
+        RenderUppercase: true,
+        TextColor: #fbbf24,
+        HorizontalAlignment: Center,
+        VerticalAlignment: Center
+      );
+      Background: (Color: #fbbf24(0.2));
+      OutlineColor: #fbbf24;
+      OutlineSize: 1;
+      Padding: (Horizontal: 8, Vertical: 2);
+      Visible: false;
+    }
+
+    // Assistant Badge
+    Label #AssistantBadge {
+      Anchor: (Height: 22);
+      Text: "ASSISTANT";
+      Style: (
+        FontSize: 10,
+        RenderBold: true,
+        RenderUppercase: true,
+        TextColor: #60a5fa,
+        HorizontalAlignment: Center,
+        VerticalAlignment: Center
+      );
+      Background: (Color: #3b82f6(0.2));
+      OutlineColor: #3b82f6;
+      OutlineSize: 1;
+      Padding: (Horizontal: 8, Vertical: 2);
+      Visible: false;
+    }
+  }
+
+  // Online Status Indicator
+  Group #OnlineStatus {
+    Anchor: (Width: 10, Height: 10, Right: 5);
+    Background: (Color: #6b7280(0.8));
+    OutlineColor: #4b5563;
+    OutlineSize: 1;
+  }
+
+  // Selection indicator (set background when selected)
+  // Background: (Color: #3b82f6(0.3));
+}

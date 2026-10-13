@@ -1,0 +1,10 @@
+# Messaggi di protezione
+protection.cannot_build = Non puoi costruire qui
+protection.cannot_destroy = Non puoi distruggere blocchi qui
+protection.cannot_interact = Non puoi interagire qui
+protection.cannot_inventory = Non puoi accedere agli inventari qui
+protection.pvp_disabled = Il PvP è disabilitato in questa area
+protection.explosion_blocked = Le esplosioni sono disabilitate in questa area
+protection.region_claimed = Questa area è già stata reclamata
+protection.not_your_claim = Questa area non appartiene alla tua città
+protection.plot_not_owned = Non possiedi questo terreno

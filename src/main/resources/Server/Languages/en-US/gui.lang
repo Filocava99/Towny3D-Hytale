@@ -1,0 +1,102 @@
+# Towny3D GUI Translations - English (en-US)
+# ============================================
+
+# Town Info GUI
+gui.town.info.title = Town Information
+gui.town.settings.title = Settings
+gui.town.residents.title = Residents
+
+# Deposit Dialog
+gui.town.deposit.title = Town Bank Deposit
+gui.town.deposit.town-balance = Town Balance:
+gui.town.deposit.your-balance = Your Balance:
+gui.town.deposit.amount-label = DEPOSIT AMOUNT
+gui.town.deposit.quick-label = QUICK DEPOSIT
+gui.town.deposit.quick-100 = $100
+gui.town.deposit.quick-500 = $500
+gui.town.deposit.quick-1000 = $1000
+gui.town.deposit.quick-all = All
+gui.town.deposit.deposit = Deposit
+gui.town.deposit.cancel = Cancel
+gui.town.deposit.error.invalid-amount = Please enter a valid amount
+gui.town.deposit.error.insufficient-funds = Insufficient funds. You have {balance}
+gui.town.deposit.success = Deposited {amount} to town bank
+
+# Layer Purchase Dialog
+gui.layer-purchase.title = Purchase Layers
+gui.layer-purchase.current = Current Layers:
+gui.layer-purchase.price = Price per Layer:
+gui.layer-purchase.your-balance = Your Balance:
+gui.layer-purchase.to-purchase = LAYERS TO PURCHASE
+gui.layer-purchase.total-cost = Total Cost:
+gui.layer-purchase.purchase = Purchase
+gui.layer-purchase.error.insufficient-funds = Insufficient funds. You need {amount}
+gui.layer-purchase.success = Purchased {layers} layers for {cost}
+
+# Settings Tab
+gui.town.settings.general = GENERAL SETTINGS
+gui.town.settings.open-joining = Open Joining (anyone can join)
+gui.town.settings.public-spawn = Public Spawn (anyone can use)
+gui.town.settings.board = TOWN BOARD
+gui.town.settings.tax = TAX SETTINGS (MAYOR ONLY)
+gui.town.settings.resident-tax = Resident Tax:
+gui.town.settings.per-day = per day
+gui.town.settings.save = Save Changes
+gui.town.settings.cancel = Cancel
+
+# Residents Tab
+gui.town.residents.invite = Invite Player
+gui.town.residents.search = Search residents...
+gui.town.residents.prev = < Prev
+gui.town.residents.next = Next >
+gui.town.residents.role.mayor = MAYOR
+gui.town.residents.role.assistant = ASSISTANT
+gui.town.residents.role.resident = RESIDENT
+gui.town.residents.promote = Promote
+gui.town.residents.demote = Demote
+gui.town.residents.kick = Kick
+
+# Region Map GUI
+gui.region-map.title = Town Regions
+gui.region-map.claims = Claims:
+gui.region-map.position = Position:
+gui.region-map.refresh = Refresh
+gui.region-map.controls = CONTROLS
+gui.region-map.left-click = Left Click:
+gui.region-map.left-click-claim =   Claim chunk
+gui.region-map.right-click = Right Click:
+gui.region-map.right-click-unclaim =   Unclaim
+gui.region-map.middle-click = Middle Click:
+gui.region-map.middle-click-details =   View details
+gui.region-map.legend = LEGEND
+gui.region-map.legend.your-town =  Your Town
+gui.region-map.legend.wilderness =  Wilderness
+gui.region-map.legend.other-towns =  Other Towns
+gui.region-map.legend.your-position =  Your Position
+gui.region-map.claim-3x3 = Claim 3x3
+gui.region-map.close = Close
+gui.region-map.tooltip.town = Town:
+gui.region-map.tooltip.y-range = Y Range:
+gui.region-map.tooltip.name = Name:
+gui.region-map.tooltip.right-click-unclaim = Right-click to unclaim
+gui.region-map.tooltip.double-click-details = Double-click for details
+gui.region-map.tooltip.wilderness = Wilderness
+gui.region-map.tooltip.click-claim = Click to claim
+
+# Plot Settings GUI
+gui.plot-settings.title = Plot Settings
+gui.plot-settings.location = Location:
+gui.plot-settings.y-range = Y Range:
+gui.plot-settings.name-label = PLOT NAME (OPTIONAL)
+gui.plot-settings.owner = OWNER
+gui.plot-settings.owner.town-owned = Town Owned
+gui.plot-settings.evict = Evict
+gui.plot-settings.flags = FLAGS
+gui.plot-settings.pvp = PvP
+gui.plot-settings.fire = Fire Spread
+gui.plot-settings.explosion = Explosions
+gui.plot-settings.mobs = Mob Spawning
+gui.plot-settings.for-sale = For Sale
+gui.plot-settings.price = Price:
+gui.plot-settings.save = Save
+gui.plot-settings.cancel = Cancel

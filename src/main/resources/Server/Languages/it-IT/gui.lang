@@ -1,0 +1,102 @@
+# Towny3D GUI Transations - Italian (it-IT)
+# ===========================================
+
+# Town Info GUI
+gui.town.info.title = Informazioni Città
+gui.town.settings.title = Impostazioni
+gui.town.residents.title = Residenti
+
+# Deposit Dialog
+gui.town.deposit.title = Deposito Banca Città
+gui.town.deposit.town-balance = Saldo Città:
+gui.town.deposit.your-balance = Tuo Saldo:
+gui.town.deposit.amount-label = IMPORTO DEPOSITO
+gui.town.deposit.quick-label = DEPOSITO RAPIDO
+gui.town.deposit.quick-100 = €100
+gui.town.deposit.quick-500 = €500
+gui.town.deposit.quick-1000 = €1000
+gui.town.deposit.quick-all = Tutto
+gui.town.deposit.deposit = Deposita
+gui.town.deposit.cancel = Annulla
+gui.town.deposit.error.invalid-amount = Inserisci un importo valido
+gui.town.deposit.error.insufficient-funds = Fondi insufficienti. Hai {balance}
+gui.town.deposit.success = Depositati {amount} nella banca della città
+
+# Layer Purchase Dialog
+gui.layer-purchase.title = Acquista Livelli
+gui.layer-purchase.current = Livelli Attuali:
+gui.layer-purchase.price = Prezzo per Livello:
+gui.layer-purchase.your-balance = Tuo Saldo:
+gui.layer-purchase.to-purchase = LIVELLI DA ACQUISTARE
+gui.layer-purchase.total-cost = Costo Totale:
+gui.layer-purchase.purchase = Acquista
+gui.layer-purchase.error.insufficient-funds = Fondi insufficienti. Servono {amount}
+gui.layer-purchase.success = Acquistati {layers} livelli per {cost}
+
+# Settings Tab
+gui.town.settings.general = IMPOSTAZIONI GENERALI
+gui.town.settings.open-joining = Iscrizione Aperta (chiunque può unirsi)
+gui.town.settings.public-spawn = Spawn Pubblico (chiunque può usarlo)
+gui.town.settings.board = BACHECA CITTÀ
+gui.town.settings.tax = IMPOSTAZIONI TASSE (SOLO SINDACO)
+gui.town.settings.resident-tax = Tassa Residenti:
+gui.town.settings.per-day = al giorno
+gui.town.settings.save = Salva Modifiche
+gui.town.settings.cancel = Annulla
+
+# Residents Tab
+gui.town.residents.invite = Invita Giocatore
+gui.town.residents.search = Cerca residenti...
+gui.town.residents.prev = < Prec
+gui.town.residents.next = Succ >
+gui.town.residents.role.mayor = SINDACO
+gui.town.residents.role.assistant = ASSISTENTE
+gui.town.residents.role.resident = RESIDENTE
+gui.town.residents.promote = Promuovi
+gui.town.residents.demote = Degrad
+gui.town.residents.kick = Espelli
+
+# Region Map GUI
+gui.region-map.title = Regioni Città
+gui.region-map.claims = Rivendicazioni:
+gui.region-map.position = Posizione:
+gui.region-map.refresh = Aggiorna
+gui.region-map.controls = CONTROLLI
+gui.region-map.left-click = Click Sinistro:
+gui.region-map.left-click-claim =   Rivendica chunk
+gui.region-map.right-click = Click Destro:
+gui.region-map.right-click-unclaim =   Annulla rivendicazione
+gui.region-map.middle-click = Click Centrale:
+gui.region-map.middle-click-details =   Vedi dettagli
+gui.region-map.legend = LEGENDA
+gui.region-map.legend.your-town =  Tua Città
+gui.region-map.legend.wilderness =  Terra di Nessuno
+gui.region-map.legend.other-towns =  Altre Città
+gui.region-map.legend.your-position =  Tua Posizione
+gui.region-map.claim-3x3 = Rivendica 3x3
+gui.region-map.close = Chiudi
+gui.region-map.tooltip.town = Città:
+gui.region-map.tooltip.y-range = Range Y:
+gui.region-map.tooltip.name = Nome:
+gui.region-map.tooltip.right-click-unclaim = Click destro per annullare
+gui.region-map.tooltip.double-click-details = Doppio click per dettagli
+gui.region-map.tooltip.wilderness = Terra di Nessuno
+gui.region-map.tooltip.click-claim = Click per rivendicare
+
+# Plot Settings GUI
+gui.plot-settings.title = Impostazioni Plot
+gui.plot-settings.location = Posizione:
+gui.plot-settings.y-range = Range Y:
+gui.plot-settings.name-label = NOME PLOT (OPZIONALE)
+gui.plot-settings.owner = PROPRIETARIO
+gui.plot-settings.owner.town-owned = Di Proprietà della Città
+gui.plot-settings.evict = Sfratta
+gui.plot-settings.flags = FLAG
+gui.plot-settings.pvp = PvP
+gui.plot-settings.fire = Propagazione Fuoco
+gui.plot-settings.explosion = Esplosioni
+gui.plot-settings.mobs = Spawn Mob
+gui.plot-settings.for-sale = In Vendita
+gui.plot-settings.price = Prezzo:
+gui.plot-settings.save = Salva
+gui.plot-settings.cancel = Annulla
